@@ -6,4 +6,4 @@ y = number
 # x is the iterated number while y is inout from user
 for x in range(1,11):
     z = y * x
-    print(f"{y} * {x} = {z}" )
+    print(f" {y} * {x} = {z}" )
