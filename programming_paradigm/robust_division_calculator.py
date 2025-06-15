@@ -1,14 +1,19 @@
-
-
-def safe_divide(numerator, denominator):
-    try:
-        num = float(numerator)
-        deno = float(denominator)
-        result = num / deno
-        return result 
-    except ZeroDivisionError:
-        return "zero division is not possible"
-    except ValueError:
-        return "provide a number "
-    finally :
-        pass
+class BankAccount:
+    def __init__(self, initial_balance=0):
+        self.initial_balance = initial_balance
+    def deposit(self, amount):
+        if amount > 0:
+            self.initial_balance  += amount
+        else:
+            print("Deposit amount must be positive.")
+    def withdraw(self, amount):
+        if amount <= 0:
+            return False
+        if amount > self.initial_balance:
+            return False
+        else:
+            self.initial_balance -= amount
+            return True
+        
+    def display_balance(self):
+        print(f"Current Balance: ${self.initial_balance:.2f}")
