@@ -1,4 +1,4 @@
- class Book:
+class Book:
     def __init__(self, title, author, year):
         """Constructor to initialize the book attributes."""
         self.title = title
